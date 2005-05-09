@@ -97,8 +97,9 @@ fi
 if [ "$1" = 1 ]; then
 %banner %{name} -e <<EOF
 IMPORTANT:
-If you are installing for the first time, you must now
-create the wicked database tables. Look into directory
+If you are installing wicked for the first time, you must now
+create the wicked database tables in "horde" database.
+Look into directory
 %{_docdir}/%{name}-%{version}/scripts/sql
 to find out how to do this for your database.
 EOF
