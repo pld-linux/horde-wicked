@@ -1,11 +1,11 @@
 
 %define	_snap	2005-05-09
-%define	_rel	4
+%define	_rel	1
 
 %include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
 Name:		wicked
-Version:	1.0
+Version:	0.1
 Release:	%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	GPL
 Group:		Applications/WWW
