@@ -4,6 +4,7 @@
 
 %include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
+Summary(pl):	Narzêdzie do rozwi±zywania problemów u¿ytkowników Horde
 Name:		wicked
 Version:	0.1
 Release:	%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
@@ -38,6 +39,14 @@ package for markup rules, parsing, and rendering.
 The Horde Project writes web applications in PHP and releases them
 under the GNU General Public License. For more information (including
 help with Wicked) please visit <http://www.horde.org/>.
+
+%description -l pl
+Wicked to Wiki dla szkieletu Horde. U¿ywa pakietu PEAR-a Text_Wiki do
+opisu wygl±du, przetwarzania i renderowania.
+
+Projekt Horde tworzy aplikacje WWW w PHP i wydaje je na licencji GNU
+Genral Public License. Wiêcej informacji (w³±cznie z pomoc± dla
+Wicked) mo¿na znale¼æ na stronie <http://www.horde.org/>.
 
 %prep
 %setup -q -n %{name}
