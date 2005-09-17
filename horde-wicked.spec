@@ -1,12 +1,12 @@
 %define	_hordeapp wicked
 %define	_snap	2005-09-17
 #define	_rc		rc1
-%define	_rel	1.3
+%define	_rel	0.1
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
 Summary(pl):	Narzêdzie do rozwi±zywania problemów u¿ytkowników Horde
-Name:		%{_hordeapp}
+Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	GPL
@@ -22,6 +22,7 @@ Requires:	apache >= 1.3.33-2
 Requires:	apache(mod_access)
 # actually it requires horde 3.1, but 3.0 is fine for testing too.
 Requires:	horde >= 3.0
+Obsoletes:	%{_hordeapp}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
