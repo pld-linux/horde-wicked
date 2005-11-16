@@ -1,7 +1,7 @@
 %define	_hordeapp wicked
-%define	_snap	2005-09-17
+%define	_snap	2005-11-16
 #define	_rc		rc1
-%define	_rel	0.1
+%define	_rel	0.2
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
@@ -12,17 +12,18 @@ Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	GPL
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	8713e3643be281a7603b09f15d5a5321
+# Source0-md5:	ed73b5084b939805f9b0d236c8ccb094
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/wicked/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 BuildRequires:	rpmbuild(macros) >= 1.226
 BuildRequires:	tar >= 1:1.15.1
-Requires:	apache >= 1.3.33-2
+Requires:	webserver = apache
 Requires:	apache(mod_access)
 # actually it requires horde 3.1, but 3.0 is fine for testing too.
 Requires:	horde >= 3.0
 Obsoletes:	%{_hordeapp}
+Conflicts:	apache < 1.3.33-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
