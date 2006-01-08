@@ -1,7 +1,7 @@
 %define	_hordeapp wicked
-%define	_snap	2005-11-16
+%define	_snap	2006-01-08
 #define	_rc		rc1
-%define	_rel	0.11
+%define	_rel	0.1
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
@@ -12,7 +12,7 @@ Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	GPL
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	ed73b5084b939805f9b0d236c8ccb094
+# Source0-md5:	df34879998bf7f0ecf4de8e29f817c7e
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/wicked/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
