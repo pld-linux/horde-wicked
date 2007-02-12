@@ -5,7 +5,7 @@
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
-Summary(pl):	Narzêdzie do rozwi±zywania problemów u¿ytkowników Horde
+Summary(pl.UTF-8):   NarzÄ™dzie do rozwiÄ…zywania problemÃ³w uÅ¼ytkownikÃ³w Horde
 Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
@@ -42,13 +42,13 @@ The Horde Project writes web applications in PHP and releases them
 under the GNU General Public License. For more information (including
 help with Wicked) please visit <http://www.horde.org/>.
 
-%description -l pl
-Wicked to Wiki dla szkieletu Horde. U¿ywa pakietu PEAR-a Text_Wiki do
-opisu wygl±du, przetwarzania i renderowania.
+%description -l pl.UTF-8
+Wicked to Wiki dla szkieletu Horde. UÅ¼ywa pakietu PEAR-a Text_Wiki do
+opisu wyglÄ…du, przetwarzania i renderowania.
 
 Projekt Horde tworzy aplikacje WWW w PHP i wydaje je na licencji GNU
-Genral Public License. Wiêcej informacji (w³±cznie z pomoc± dla
-Wicked) mo¿na znale¼æ na stronie <http://www.horde.org/>.
+Genral Public License. WiÄ™cej informacji (wÅ‚Ä…cznie z pomocÄ… dla
+Wicked) moÅ¼na znaleÅºÄ‡ na stronie <http://www.horde.org/>.
 
 %prep
 %setup -qcT -n %{?_snap:%{_hordeapp}-%{_snap}}%{!?_snap:%{_hordeapp}-%{version}%{?_rc:-%{_rc}}}
