@@ -1,5 +1,5 @@
 %define	_hordeapp wicked
-%define	_snap	2006-01-08
+%define	_snap	2007-03-15
 #define	_rc		rc1
 %define	_rel	0.1
 #
@@ -12,7 +12,7 @@ Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	GPL
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	df34879998bf7f0ecf4de8e29f817c7e
+# Source0-md5:	3d08bfbd800d9c23f74bdc5f29490c73
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/wicked/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
