@@ -1,5 +1,5 @@
 %define	_hordeapp wicked
-%define	_snap	2007-03-15
+%define	_snap	2008-10-10
 #define	_rc		rc1
 %define	_rel	0.1
 #
@@ -12,7 +12,7 @@ Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	GPL
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	3d08bfbd800d9c23f74bdc5f29490c73
+# Source0-md5:	7326374c90177ebee16e265e42938182
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/wicked/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
@@ -67,7 +67,7 @@ cp -a *.php $RPM_BUILD_ROOT%{_appdir}
 cp -a config/* $RPM_BUILD_ROOT%{_sysconfdir}
 echo '<?php ?>' > $RPM_BUILD_ROOT%{_sysconfdir}/conf.php
 touch $RPM_BUILD_ROOT%{_sysconfdir}/conf.php.bak
-cp -a lib locale templates themes $RPM_BUILD_ROOT%{_appdir}
+cp -a js lib locale templates themes $RPM_BUILD_ROOT%{_appdir}
 cp -a docs/CREDITS $RPM_BUILD_ROOT%{_appdir}/docs
 
 ln -s %{_sysconfdir} $RPM_BUILD_ROOT%{_appdir}/config
@@ -146,6 +146,7 @@ fi
 %{_appdir}/*.php
 %{_appdir}/config
 %{_appdir}/docs
+%{_appdir}/js
 %{_appdir}/lib
 %{_appdir}/locale
 %{_appdir}/templates
