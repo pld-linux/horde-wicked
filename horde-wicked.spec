@@ -21,7 +21,7 @@ BuildRequires:	tar >= 1:1.15.1
 Requires:	horde >= 3.2
 Requires:	php-pear-Text_Wiki
 Requires:	webapps
-Obsoletes:	%{_hordeapp}
+Obsoletes:	wicked
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
