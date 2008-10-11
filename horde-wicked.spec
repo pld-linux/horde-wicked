@@ -1,7 +1,7 @@
 %define	_hordeapp wicked
 %define	_snap	2008-10-10
 #define	_rc		rc1
-%define	_rel	0.1
+%define	_rel	0.2
 #
 %include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
@@ -18,7 +18,8 @@ URL:		http://www.horde.org/wicked/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	tar >= 1:1.15.1
-Requires:	horde >= 3.1
+Requires:	horde >= 3.2
+Requires:	php-pear-Text_Wiki
 Requires:	webapps
 Obsoletes:	%{_hordeapp}
 BuildArch:	noarch
