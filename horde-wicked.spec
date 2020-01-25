@@ -3,7 +3,6 @@
 #define	_rc		rc1
 %define	_rel	0.2
 #
-%include	/usr/lib/rpm/macros.php
 Summary:	The Web Horde User Problem Solver
 Summary(pl.UTF-8):	Narzędzie do rozwiązywania problemów użytkowników Horde
 Name:		horde-%{_hordeapp}
